@@ -25,8 +25,6 @@ namespace lve
 
 	private:
 		void loadModels();
-		void randomizeModel();
-		void serpensk();
 		void createPipelineLayout();
 		void createPipeline();
 		void createCommandBuffers();
@@ -40,10 +38,5 @@ namespace lve
 		VkPipelineLayout pipelineLayout;
 		std::vector<VkCommandBuffer> commandBuffers;
 		std::unique_ptr<LveModel> lveModel;
-		std::vector<LveModel::Vertex> vertices = {
-			{{0.0f, -0.5f}},
-			{{0.5f, 0.5f}},
-			{{-0.5f, 0.5f}},
-		};
 	};
 }

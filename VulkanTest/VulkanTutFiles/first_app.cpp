@@ -2,7 +2,6 @@
 
 #include <stdexcept>
 #include <array>
-#include <ctime>
 
 namespace lve
 {
@@ -32,57 +31,12 @@ namespace lve
 
 	void FirstApp::loadModels()
 	{
-		/*std::vector<LveModel::Vertex> vertices = {
+		std::vector<LveModel::Vertex> vertices = {
 			{{0.0f, -0.5f}},
 			{{0.5f, 0.5f}},
 			{{-0.5f, 0.5f}},
-		};*/
+		};
 
-		lveModel = std::make_unique<LveModel>(lveDevice, vertices);
-	}
-
-	void FirstApp::randomizeModel()
-	{
-		std::vector<LveModel::Vertex> shiboopicies;
-
-		for (int i = 0; i < 3; i++)
-		{
-			LveModel::Vertex derp;
-			derp.position.x = static_cast<float> (rand() / static_cast<float>(RAND_MAX / 2)) - 1;
-			derp.position.y = static_cast<float> (rand() / static_cast<float>(RAND_MAX / 2)) - 1;
-			shiboopicies.push_back(derp);
-		}
-
-		lveModel = std::make_unique<LveModel>(lveDevice, shiboopicies);
-	}
-
-	void FirstApp::serpensk()
-	{
-		std::vector<LveModel::Vertex> newVertices;
-
-		for (int i = 0; i < vertices.size(); i += 3)
-		{
-			LveModel::Vertex middleRight = { {(vertices[i + 1].position.x + vertices[i].position.x) / 2, (vertices[i + 1].position.y + vertices[i].position.y) / 2} };
-			LveModel::Vertex middleLeft = { {(vertices[i + 2].position.x + vertices[i].position.x) / 2, (vertices[i + 2].position.y + vertices[i].position.y) / 2} };
-			LveModel::Vertex middleBottom = { {(vertices[i + 2].position.x + vertices[i + 1].position.x) / 2, (vertices[i + 2].position.y + vertices[i + 1].position.y) / 2} };
-			// first vertex becomes top point in new triangle
-			newVertices.push_back(vertices[i]);
-			newVertices.push_back(middleRight);
-			newVertices.push_back(middleLeft);
-
-			// second vertex becomes bottom right point in new triangle
-			newVertices.push_back(middleRight);
-			newVertices.push_back(vertices[i + 1]);
-			newVertices.push_back(middleBottom);
-
-			// third vertex becomes bottom left point in new triangle
-			newVertices.push_back(middleLeft);
-			newVertices.push_back(middleBottom);
-			newVertices.push_back(vertices[i + 2]);
-		}
-
-		vertices.clear();
-		vertices.insert(vertices.end(), newVertices.begin(), newVertices.end());
 		lveModel = std::make_unique<LveModel>(lveDevice, vertices);
 	}
 
@@ -178,13 +132,5 @@ namespace lve
 		{
 			throw std::runtime_error("failed to present swap chain image!");
 		}
-
-		int delay = 2;
-		delay *= CLOCKS_PER_SEC;
-		clock_t now = clock();
-		while (clock() - now < delay);
-
-		serpensk();
-		createCommandBuffers();
 	}
 }
