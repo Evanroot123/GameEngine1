@@ -5,6 +5,7 @@
 
 # project specific files
 Libraries/
+*.spv
 
 # User-specific files
 *.rsuser
