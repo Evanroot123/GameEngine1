@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VulkanTutFiles\first_app.h" />
+    <ClInclude Include="VulkanTutFiles\lve_game_object.h" />
     <ClInclude Include="VulkanTutFiles\lve_model.h" />
     <ClInclude Include="VulkanTutFiles\lve_pipeline.h" />
     <ClInclude Include="VulkanTutFiles\lve_swap_chain.h" />
