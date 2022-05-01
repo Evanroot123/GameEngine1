@@ -42,6 +42,12 @@
     <ClCompile Include="VulkanTutFiles\lve_model.cpp">
       <Filter>VulkanTutFiles</Filter>
     </ClCompile>
+    <ClCompile Include="VulkanTutFiles\lve_renderer.cpp">
+      <Filter>VulkanTutFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="VulkanTutFiles\simple_render_system.cpp">
+      <Filter>VulkanTutFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\compile.bat">
@@ -74,6 +80,12 @@
       <Filter>VulkanTutFiles</Filter>
     </ClInclude>
     <ClInclude Include="VulkanTutFiles\lve_game_object.h">
+      <Filter>VulkanTutFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanTutFiles\lve_renderer.h">
+      <Filter>VulkanTutFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="VulkanTutFiles\simple_render_system.h">
       <Filter>VulkanTutFiles</Filter>
     </ClInclude>
   </ItemGroup>

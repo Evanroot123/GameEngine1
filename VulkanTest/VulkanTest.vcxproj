@@ -159,9 +159,11 @@
     <ClCompile Include="VulkanTutFiles\first_app.cpp" />
     <ClCompile Include="VulkanTutFiles\lve_model.cpp" />
     <ClCompile Include="VulkanTutFiles\lve_pipeline.cpp" />
+    <ClCompile Include="VulkanTutFiles\lve_renderer.cpp" />
     <ClCompile Include="VulkanTutFiles\lve_swap_chain.cpp" />
     <ClCompile Include="VulkanTutFiles\lve_window.cpp" />
     <ClCompile Include="VulkanTutFiles\lve_device.cpp" />
+    <ClCompile Include="VulkanTutFiles\simple_render_system.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\compile.bat" />
@@ -173,9 +175,11 @@
     <ClInclude Include="VulkanTutFiles\lve_game_object.h" />
     <ClInclude Include="VulkanTutFiles\lve_model.h" />
     <ClInclude Include="VulkanTutFiles\lve_pipeline.h" />
+    <ClInclude Include="VulkanTutFiles\lve_renderer.h" />
     <ClInclude Include="VulkanTutFiles\lve_swap_chain.h" />
     <ClInclude Include="VulkanTutFiles\lve_window.h" />
     <ClInclude Include="VulkanTutFiles\lve_device.h" />
+    <ClInclude Include="VulkanTutFiles\simple_render_system.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
